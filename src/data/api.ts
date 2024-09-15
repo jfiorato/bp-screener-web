@@ -4,7 +4,7 @@ import { Screener } from "./types";
 const BASE_URL = 'https://thawing-savannah-66031-0c3d29d73cd6.herokuapp.com/';
 
 export async function fetchScreener(): Promise<Screener> {
-    const response = await axios.get(BASE_URL + 'screeners');
+    const response = await axios.get(BASE_URL + 'screeners/1234');
     const data = await response.data;
     return data;
 }
