@@ -45,7 +45,7 @@ export default function App() {
   return (
     <Container maxWidth="xl">
       <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
+        <Typography variant="h4">
           { screenerLoading ? "[Loading...]" : screener?.full_name }
         </Typography>
         { !screenerLoading && 
@@ -57,6 +57,7 @@ export default function App() {
             </Box>
             { (currentQuestionIdx!==screener?.content.sections[0].questions?.length) ? (
               <React.Fragment>
+                <Typography variant="h5">{screener?.content.sections[0].title}</Typography>
                 <Box sx={{ my: 4 }}>
                   <Question 
                     currentQuestion={screener?.content.sections[0].questions[currentQuestionIdx]}
